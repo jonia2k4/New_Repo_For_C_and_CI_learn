@@ -16,8 +16,8 @@ int prime_number(int num)
 {
 /* prime numbers: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 
                53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, */
-int i;
-int p;
+int i=0;
+int p=0;
 
 for(i=1; i<=num; i++)
    {
@@ -36,7 +36,7 @@ for(i=1; i<=num; i++)
    }
 }
 
-void Prime_numberCUnitTest(int N)
+void Prime_numberCUnitTest()
 {
 
 CU_ASSERT(prime_number(19) == 1);
