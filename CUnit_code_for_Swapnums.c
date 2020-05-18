@@ -1,8 +1,5 @@
 #include <CUnit/CUnit.h>
 #include <CUnit/Basic.h>
-#include <math.h>
-#include <stdio.h>  
-#include <stdlib.h> 
 
 void swap(int*, int*);
 int prime_number(int);
@@ -64,7 +61,7 @@ float findAreaTriangle(float a, float b, float c)
         exit(0); 
     } 
     float s = (a+b+c)/2; 
-    return sqrt(s*(s-a)*(s-b)*(s-c)); 
+    return (s*(s-a)*(s-b)*(s-c)); 
 } 
 
 void AreaTriangleCUnitTest()
