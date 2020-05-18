@@ -16,10 +16,8 @@ before_install:
   - export LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/lib:$LD_LIBRARY_PATH
   #Come back to the repo unwarpped folder
   - cd $TRAVIS_BUILD_DIR/
-
 install:
 - echo "Reached Install Section"
-
 
 script:
 - echo "Reached Script Section"
@@ -31,3 +29,4 @@ script:
 - gcc  Cunit_code.c -o Cunit_code -lcunit
 - ./Cunit_code
 - size Cunit_code
+
