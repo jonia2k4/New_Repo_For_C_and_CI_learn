@@ -20,7 +20,6 @@ install:
 - echo "Reached Install Section"
 
 script:
-- echo "Reached Script Section"
 - echo "Reached Script Section - Multi File Compile "
 - gcc initial_code.c -o output
 - ./output
@@ -29,4 +28,3 @@ script:
 - gcc  Cunit_code.c -o Cunit_code -lcunit
 - ./Cunit_code
 - size Cunit_code
-
