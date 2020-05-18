@@ -41,7 +41,7 @@ void Prime_numberCUnitTest(int N)
 
 CU_ASSERT(prime_number(19) == 1);
 CU_ASSERT(prime_number(1) == 0);
-CU_ASSERT(prime_number(67) == 1);
+CU_ASSERT(prime_number(79) == 1);
 CU_ASSERT(prime_number(100) == 0);
 }
 
@@ -59,10 +59,10 @@ int main()
  {
 CU_initialize_registry();
 CU_pSuite suite = CU_add_suite("swapnum_test", 0, 0);
-CU_pSuite suite1 = CU_add_suite("primenum_test", 0, 0);
+
 	
 CU_add_test(suite, "swap_fun", Swap_number_CUnitTest);
-CU_add_test(suite1, "prime_fun", Prime_numberCUnitTest);
+CU_add_test(suite, "prime_fun", Prime_numberCUnitTest);
 
 CU_basic_set_mode(CU_BRM_VERBOSE);
 CU_basic_run_tests();
