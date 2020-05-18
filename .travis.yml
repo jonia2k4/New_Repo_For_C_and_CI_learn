@@ -16,3 +16,8 @@ script:
 - gcc  Cunit_code.c -o Cunit_code -lcunit
 - ./Cunit_code
 - size Cunit_code
+- echo "Reached Script Section - CUnit_code_for_Swapnums"
+- gcc  CUnit_code_for_Swapnums.c -o CUnit_code_for_Swapnums -lcunit
+- ./CUnit_code_for_Swapnums
+- size Cunit_code
+
