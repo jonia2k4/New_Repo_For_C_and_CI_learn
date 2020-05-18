@@ -1,9 +1,13 @@
 #include <CUnit/CUnit.h>
 #include <CUnit/Basic.h>
+#include <math.h>
+#include <stdio.h>  
+#include <stdlib.h> 
 
 void swap(int*, int*);
 int prime_number(int);
 int largest_in_Array(int[],int); 
+float findAreaTriangle(float,float,float);
 
 void swap(int *a, int *b)
 {
