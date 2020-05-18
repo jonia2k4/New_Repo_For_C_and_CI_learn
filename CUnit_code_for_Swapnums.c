@@ -73,7 +73,7 @@ void AreaTriangleCUnitTest()
   float b = 4.0; 
   float c = 5.0; 
   float result;
-  result = findArea(a, b, c);
+  result = findAreaTriangle(a, b, c);
   CU_ASSERT_EQUAL(result,6.0);
 }
 
