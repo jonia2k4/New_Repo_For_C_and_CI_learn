@@ -1,6 +1,8 @@
 #include <CUnit/CUnit.h>
 #include <CUnit/Basic.h>
 
+void swap(int*, int*);
+
 void swap(int *a, int *b)
 {
    int temp;
@@ -20,7 +22,7 @@ void Swap_number_CUnitTest()
      CU_ASSERT_EQUAL(nums[1],10);
  }
  
-void main()
+int main()
  {
 CU_initialize_registry();
 CU_pSuite suite = CU_add_suite("swapnum_test", 0, 0);
@@ -31,4 +33,5 @@ CU_basic_set_mode(CU_BRM_VERBOSE);
 CU_basic_run_tests();
 CU_cleanup_registry();
 
+return 0;
 }
