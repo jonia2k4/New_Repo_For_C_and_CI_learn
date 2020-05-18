@@ -3,6 +3,7 @@
 
 void swap(int*, int*);
 int prime_number(int);
+int largest_in_Array(int[],int); 
 
 void swap(int *a, int *b)
 {
@@ -36,6 +37,19 @@ for(i=1; i<=num; i++)
    }
 }
 
+int largest_in_Array(int arr[], int n) 
+{ 
+    int i; 
+     
+    int max = arr[0]; 
+   
+    for (i = 1; i < n; i++) 
+        if (arr[i] > max) 
+            max = arr[i]; 
+  
+    return max; 
+}
+
 void Prime_numberCUnitTest()
 {
 
@@ -45,6 +59,17 @@ CU_ASSERT(prime_number(79) == 1);
 CU_ASSERT(prime_number(100) == 0);
 }
 
+void largestnumberin_ArrayCUnitTest()
+{
+
+   int arr[] = {10, 324, 45, 90, 9808};
+   int n = sizeof(arr)/sizeof(arr[0]);
+   int result=0;
+   result = largest_in_Array(arr,n);    
+	 
+   CU_ASSERT_EQUAL(result,9808);  
+
+}
 void Swap_number_CUnitTest()
  {
     int nums[2] = {10, 15};
@@ -63,7 +88,8 @@ CU_pSuite suite = CU_add_suite("swapnum_test", 0, 0);
 	
 CU_add_test(suite, "swap_fun", Swap_number_CUnitTest);
 CU_add_test(suite, "prime_fun", Prime_numberCUnitTest);
-
+CU_add_test(suite, "Maxarr_fun",largestnumberin_ArrayCUnitTest);
+	
 CU_basic_set_mode(CU_BRM_VERBOSE);
 CU_basic_run_tests();
 CU_cleanup_registry();
