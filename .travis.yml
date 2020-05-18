@@ -3,11 +3,31 @@ compiler:
 - gcc
 before_install:
 - sudo apt-get update
-- sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev
+# - sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev
+#Alternative for the above step - Long 
+  - wget http://downloads.sourceforge.net/project/cunit/CUnit/2.1-2/CUnit-2.1-2-src.tar.bz2
+  - tar -xvjpf CUnit-2.1-2-src.tar.bz2
+  - cd CUnit-2.1-2
+  - ./configure --prefix=$TRAVIS_BUILD_DIR
+  - make
+  - make install
+  - export C_INCLUDE_PATH=$TRAVIS_BUILD_DIR/include:$C_INCLUDE_PATH
+  - export LIBRARY_PATH=$TRAVIS_BUILD_DIR/lib:$LIBRARY_PATH
+  - export LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/lib:$LD_LIBRARY_PATH
+  #Come back to the repo unwarpped folder
+  - cd $TRAVIS_BUILD_DIR/
+
 install:
 - echo "Reached Install Section"
 
+
 script:
 - echo "Reached Script Section"
+- echo "Reached Script Section - Multi File Compile "
 - gcc initial_code.c -o output
 - ./output
+- size output
+- echo "Reached Script Section - Cunit_code"
+- gcc  Cunit_code.c -o Cunit_code -lcunit
+- ./Cunit_code
+- size Cunit_code
