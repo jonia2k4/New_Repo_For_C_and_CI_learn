@@ -50,6 +50,29 @@ int largest_in_Array(int arr[], int n)
     return max; 
 }
 
+float findAreaTriangle(float a, float b, float c) 
+{ 
+    // Length of sides must be positive and sum of any two sides 
+    // must be smaller than third side. 
+    if (a < 0 || b < 0 || c <0 || (a+b <= c) || 
+        a+c <=b || b+c <=a) 
+    { 
+        exit(0); 
+    } 
+    float s = (a+b+c)/2; 
+    return sqrt(s*(s-a)*(s-b)*(s-c)); 
+} 
+
+void AreaTriangleCUnitTest()
+{
+  float a = 3.0; 
+  float b = 4.0; 
+  float c = 5.0; 
+  float result;
+  result = findArea(a, b, c);
+  CU_ASSERT_EQUAL(result,6.0);
+}
+
 void Prime_numberCUnitTest()
 {
 
@@ -89,6 +112,7 @@ CU_pSuite suite = CU_add_suite("swapnum_test", 0, 0);
 CU_add_test(suite, "swap_fun", Swap_number_CUnitTest);
 CU_add_test(suite, "prime_fun", Prime_numberCUnitTest);
 CU_add_test(suite, "Maxarr_fun",largestnumberin_ArrayCUnitTest);
+CU_add_test(suite, "areaTriangle",AreaTriangleCUnitTest);
 	
 CU_basic_set_mode(CU_BRM_VERBOSE);
 CU_basic_run_tests();
