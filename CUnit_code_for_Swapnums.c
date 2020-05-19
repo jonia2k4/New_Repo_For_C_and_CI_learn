@@ -59,8 +59,11 @@ int largest_in_Array(int arr[], int n)
 int Validate_Pwd(char a[])
 {
     char c;
-    int len,i,flag1=0,flag2=0,flag3=0,flag4=0;
+    int len=0,i=0;
+    int flag1=0,flag2=0,flag3=0,flag4=0;
+	
     len=strlen(a);
+	
     if(len<6)
     flag1=1;
     else
