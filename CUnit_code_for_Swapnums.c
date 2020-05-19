@@ -108,9 +108,9 @@ should have one digit from(o-9)\n3. atleast one special charecter($,*,#,&)\n4.
 length should be atleast 6\n");*/
 
 CU_ASSERT(Validate_Pwd("J1$abc") == 1);
-CU_ASSERT(Validate_Pwd("J1$abcwyie") == 0);
+CU_ASSERT(Validate_Pwd("J1$abcwyie") == 1);
 CU_ASSERT(Validate_Pwd("J1abef") == 0);
-CU_ASSERT(Validate_Pwd("$b1dac") == 1);
+CU_ASSERT(Validate_Pwd("b1dac") == 0);
 	
 }	
 void Prime_numberCUnitTest()
