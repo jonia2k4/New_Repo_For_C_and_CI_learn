@@ -4,7 +4,8 @@
 void swap(int*, int*);
 int prime_number(int);
 int largest_in_Array(int[],int); 
-int Validate_Pwd(char a[]);
+int Validate_Pwd(char[]);
+int stringlength(char[]);
 
 /* This function is to swap 2 integers */
 void swap(int *a, int *b)
