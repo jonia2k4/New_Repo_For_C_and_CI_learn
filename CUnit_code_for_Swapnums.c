@@ -6,6 +6,7 @@ int prime_number(int);
 int largest_in_Array(int[],int); 
 int Validate_Pwd(char a[]);
 
+/* This function is to swap 2 integers */
 void swap(int *a, int *b)
 {
    int temp;
@@ -14,6 +15,7 @@ void swap(int *a, int *b)
    *a = temp;   
 }
 
+/* This function return True if the given input is Prime */
 int prime_number(int num)
 {
 /* prime numbers: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 
@@ -38,6 +40,7 @@ for(i=1; i<=num; i++)
    }
 }
 
+/* This function return largest number in the array */
 int largest_in_Array(int arr[], int n) 
 { 
     int i; 
@@ -52,6 +55,7 @@ int largest_in_Array(int arr[], int n)
 }
 
 
+/* This function validate the Pwd */
 int Validate_Pwd(char a[])
 {
     char c;
@@ -100,6 +104,7 @@ int Validate_Pwd(char a[])
 }
 
 
+/* Cunit testcases to validate the Pwd */
 void ValidtaePwd_CUnitTest()
 {
  /*("Enter your password that should satisfy the following criteria\n1.
@@ -113,6 +118,9 @@ CU_ASSERT(Validate_Pwd("J1abef") == 0);
 CU_ASSERT(Validate_Pwd("b1dac") == 0);
 	
 }	
+
+
+/* Cunit testcases to find the Prime number */
 void Prime_numberCUnitTest()
 {
 
@@ -122,6 +130,8 @@ CU_ASSERT(prime_number(79) == 1);
 CU_ASSERT(prime_number(100) == 0);
 }
 
+
+/* Cunit testcases to find largest number in the array */
 void largestnumberin_ArrayCUnitTest()
 {
 
@@ -133,6 +143,9 @@ void largestnumberin_ArrayCUnitTest()
    CU_ASSERT_EQUAL(result,9808);  
 
 }
+
+
+/* Cunit testcases to swap integers */
 void Swap_number_CUnitTest()
  {
     int nums[2] = {10, 15};
