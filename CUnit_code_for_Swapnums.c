@@ -59,8 +59,7 @@ int largest_in_Array(int arr[], int n)
 int Validate_Pwd(char a[])
 {
     char c;
-    int len=0,i=0;
-    int flag1=0,flag2=0,flag3=0,flag4=0;
+    int len,flag1=0,flag2=0,flag3=0,flag4=0;
 	
     len=strlen(a);
 	
@@ -68,7 +67,7 @@ int Validate_Pwd(char a[])
     flag1=1;
     else
     {
-        for(i=0;i<len;i++)
+        for(int i=0;i<len;i++)
         if((a[i]>=48&&a[i]<=58))
         {
             flag2=0;
@@ -78,7 +77,7 @@ int Validate_Pwd(char a[])
         else
         flag2=1;
 
-        for(i=0;i<len;i++)
+        for(int i=0;i<len;i++)
         if((a[i]>=65&&a[i]<=90))
         {
             flag3=0;
@@ -88,7 +87,7 @@ int Validate_Pwd(char a[])
         else
         flag3=1;
 
-        for(i=0;i<len;i++)
+        for(int i=0;i<len;i++)
         if(a[i]=='#'||a[i]=='$'||a[i]=='*'||a[i]=='&')
         {
             flag4=0;
