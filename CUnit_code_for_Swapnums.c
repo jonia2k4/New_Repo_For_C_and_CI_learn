@@ -107,8 +107,9 @@ int Validate_Pwd(char a[])
 
 int stringlength(char s[])
 {
-   for (int i = 0; s[i] != '\0'; ++i);
-    return i;
+ int i;
+  for (i = 0; s[i] != '\0'; ++i);
+  return i;
 }
 
 /* Cunit testcases to validate the Pwd */
