@@ -20,4 +20,8 @@ script:
 - gcc  CUnit_code_for_Swapnums.c -o CUnit_code_for_Swapnums -lcunit
 - ./CUnit_code_for_Swapnums
 - size Cunit_code
+- echo "Reached Script Section - Thread section"
+- gcc -pthread -o simple_thread simple_thread.c
+- ./simple_thread
+- size simple_thread
 
